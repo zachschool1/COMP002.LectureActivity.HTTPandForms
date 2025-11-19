@@ -5,7 +5,8 @@ form.addEventListener('submit', function (event) {
     event.preventDefault();
 
 
-    let text = form.textContent;
-    console.log(text);
+    let input = document.getElementById("text");
+    let inputText = input.value;
+    console.log(inputText);
 
 });
