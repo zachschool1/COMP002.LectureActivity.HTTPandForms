@@ -12,4 +12,17 @@ form.addEventListener('submit', function (event) {
     let colorValue = color.value;
     console.log(colorValue);
 
+
+    localStorage.setItem("localColorValue", colorValue);
 });
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    let localColor = localStorage.getItem("localColorValue");
+
+    if (localColor) {
+        let savedColor = document.getElementById("colorpicker");
+        savedColor.value = localColor;
+        console.log("saved color " + localColor);
+    }
+})
